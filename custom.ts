@@ -8,7 +8,7 @@ namespace Tello {
      * 通信グループの設定を行う．受信機と送信機のグループ設定は合わせてね
      * @param 通信グループの番号 value 1-100, eg: 1
      */
-    //% block="無線グループの設定を行う %v"
+    //% block="無線グループの設定を行う %value"
     //% group="設定"
     export function radiosetgroup(value : number): void {
         radio.setGroup(value)
@@ -18,7 +18,7 @@ namespace Tello {
      * 通信グループの設定を行う．受信機と送信機のグループ設定は合わせてね！
      * @param スピードの設定を行う value 10-100, eg: 10
      */
-    //% block="スピードを設定する %v"
+    //% block="スピードを設定する %value"
     //% group="設定"
     export function Setspped(value : number): void {
          radio.sendString("speed " + value)
@@ -29,7 +29,7 @@ namespace Tello {
      * その時，距離も設定し送信を行う．
      * @param value 上に上がる距離を設定する(cm) value 20-500, eg: 20
      */
-    //% block="うえに上がる %v"
+    //% block="うえに上がる %value"
     //% group="初心者向け"
     export function up(value : number): void {
         if (flying == 1) {
@@ -43,7 +43,7 @@ namespace Tello {
      * その時，距離も設定し送信を行う．
      * @param value 下に下る距離を設定する（cm） value 20-500, eg: 20
      */
-    //% block="したにさがる %v"
+    //% block="したにさがる %value"
     //% group="初心者向け"
     export function down(value : number): void {
         if (flying == 1) {
@@ -57,7 +57,7 @@ namespace Tello {
      * その時，距離も設定し送信を行う．
      * @param value 前に進む距離を設定する（cm） value 20-500, eg: 50
      */
-    //% block="まえにすすむ %v"
+    //% block="まえにすすむ %value"
     //% group="初心者向け"
     export function forward(value : number): void {
         if (flying == 1) {
@@ -71,7 +71,7 @@ namespace Tello {
      * その時，距離も設定し送信を行う．
      * @param value 後ろに下がる距離を設定する（cm） value 20-500, eg: 50
      */
-    //% block="うしろにさがる %v"
+    //% block="うしろにさがる %value"
     //% group="初心者向け"
     export function back(value : number): void {
         if (flying == 1) {
@@ -85,7 +85,7 @@ namespace Tello {
      * その時，距離も設定し送信を行う．
      * @param value 左にすすむ距離を設定する（cm） value 20-500, eg: 50
      */
-    //% block="ひだりにすすむ %v"
+    //% block="ひだりにすすむ %value"
     //% group="初心者向け"
     export function left(value : number): void {
         if (flying == 1) {
@@ -99,7 +99,7 @@ namespace Tello {
      * その時，距離も設定し送信を行う．
      * @param value 右にすすむ距離を設定する（cm） value 20-500, eg: 50
      */
-    //% block="みぎにすすむ %v"
+    //% block="みぎにすすむ %value"
     //% group="初心者向け"
     export function right(value : number): void {
         if (flying == 1) {
@@ -113,7 +113,7 @@ namespace Tello {
      * その時，角度を設定し送信を行う．
      * @param value 時計回りを行う角度を設定する(degrees clockwise) value 1-360, eg: 90
      */
-    //% block="とけいまわり %v"
+    //% block="とけいまわり %value"
     //% group="初心者向け"
     export function rotate_cw(value : number): void {
         if (flying == 1) {
@@ -127,7 +127,7 @@ namespace Tello {
      * その時，角度を設定し送信を行う．
      * @param value 反時計回りを行う角度を設定する(degrees counterclockwise) value 1-360, eg: 90
      */
-    //% block="はんとけいまわり %v"
+    //% block="はんとけいまわり %value"
     //% group="初心者向け"
     export function rotate_ccw(value : number): void {
         if (flying == 1) {
@@ -139,7 +139,7 @@ namespace Tello {
     /**
      * 受信機にドローンが飛行を開始する命令を送信する．
      */
-    //% block="ひこうを開始する"
+    //% block="飛行を開始する"
     //% group="中級者向け"
     export function takeoff(): void {
         radio.sendString("takeoff")
@@ -149,11 +149,24 @@ namespace Tello {
     /**
      * 受信機にドローンが着地をする命令を送信する．
     */
-    //% block="ちゃくちをおこなう"
+    //% block="着地をおこなう"
     //% group="中級者向け"
     export function land(): void {
         radio.sendString("land")
         flying = 0
+    }
+
+    /**
+     * ドローンの飛行状態の変数を取得する．
+    */
+    //% block="ドローンが飛行をしている"
+    //% group="中級者向け"
+    export function getflying(): boolean{
+        if(flying == 1){
+            return true
+        }else{
+            return false
+        }
     }
 
     /**
