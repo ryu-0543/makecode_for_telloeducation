@@ -1,7 +1,7 @@
 /**
  * Custom blocks
  */
-//% weight=0 color=#fc4c02 icon=""
+//% weight=0 color=#fc4c02 icon="\u26a1"
 //% block="ドローン""
 namespace Tello {
     /**
