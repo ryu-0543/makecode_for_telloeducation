@@ -170,6 +170,22 @@ namespace Tello {
             flying = 0
         }
     }
+    
+    /**
+     * ラジコンモードで動作します．
+     * かなり高難易度です．
+     * @param a left/right a -100-100, eg: 0
+     * @param b forward/backward b -100-100, eg: 0
+     * @param c up/down c -100-100, eg: 0
+     * @param d yaw d -100-100, eg: 0
+     */
+    //% block="RCモード 左右 %a 前後 %b 上下 %c ヨー %d"
+    //% group="上級者向け"
+    export function RCmode(a:number,b:number,c:number,d:number): void {
+        if (flying == 1) {
+            radio.sendString("rc "+a+b+c+d)
+        }
+    }
 
     /**
      * ドローンが前フリップします！おしゃれ！
@@ -212,23 +228,6 @@ namespace Tello {
     export function right_flip(): void {
         if (flying == 1) {
             radio.sendString("flip r")
-        }
-    }
-
-    /**
-     * ラジコンモードで動作します．
-     * かなり高難易度です．
-     * rc a b c dを送信します．
-     * a = left/right(-100-100)
-     * b = forward/backward(-100-100)
-     * c = up/down (-100-100)
-     * d = yaw(-100-100)
-     */
-    //% block="RCモード a %a b %b c %c d %d"
-    //% group="上級者向け"
-    export function RC(a:number,b:number,c:number,d:number): void {
-        if (flying == 1) {
-            radio.sendString("rc "+a+b+c+d)
         }
     }
 }
