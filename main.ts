@@ -1,3 +1,6 @@
-basic.forever(function () {
-	
-})
+Tello.RC(
+0,
+0,
+0,
+0
+)
