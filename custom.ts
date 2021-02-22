@@ -179,7 +179,7 @@ namespace Tello {
      * @param c up/down c -100-100, eg: 0
      * @param d yaw d -100-100, eg: 0
      */
-    //% block="RCモード 左右 %a 前後 %b 上下 %c ヨー %d"
+    //% block="RCモード | 左右 %a 前後 %b 上下 %c ヨー %d"
     //% group="上級者向け"
     export function RCmode(a:number,b:number,c:number,d:number): void {
         if (flying == 1) {
