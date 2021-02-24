@@ -117,7 +117,7 @@ namespace Tello {
     //% group="初心者向け"
     export function rotate_cw(value : number): void {
         if (flying == 1) {
-            radio.sendString("rotate_cw " + value)
+            radio.sendString("cw " + value)
             flying = 1
         }
     }
@@ -131,7 +131,7 @@ namespace Tello {
     //% group="初心者向け"
     export function rotate_ccw(value : number): void {
         if (flying == 1) {
-            radio.sendString("rotate_ccw " + value)
+            radio.sendString("ccw " + value)
             flying = 1
         }
     }
