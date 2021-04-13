@@ -85,7 +85,7 @@ let distanse = 0
 Tello.radiosetgroup(0)
 distanse = 30
 basic.forever(function () {
-    if (0 < dronecontroller.getright_X()) {
+    if (30 < dronecontroller.getright_X()) {
         Tello.rotate_cw(90)
         basic.showLeds(`
             # # # # .
@@ -96,7 +96,7 @@ basic.forever(function () {
             `)
         basic.pause(500)
     }
-    if (dronecontroller.getright_X() < 0) {
+    if (dronecontroller.getright_X() < -30) {
         Tello.rotate_ccw(90)
         basic.showLeds(`
             . # # # #
@@ -107,7 +107,7 @@ basic.forever(function () {
             `)
         basic.pause(500)
     }
-    if (0 < dronecontroller.getleft_Y()) {
+    if (30 < dronecontroller.getleft_Y()) {
         Tello.up(20)
         basic.showLeds(`
             . . # . .
@@ -118,7 +118,7 @@ basic.forever(function () {
             `)
         basic.pause(500)
     }
-    if (dronecontroller.getleft_Y() < 0) {
+    if (dronecontroller.getleft_Y() < -30) {
         Tello.down(20)
         basic.showLeds(`
             . . # . .
