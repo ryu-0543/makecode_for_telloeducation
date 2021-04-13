@@ -87,14 +87,46 @@ distanse = 30
 basic.forever(function () {
     if (0 < dronecontroller.getright_X()) {
         Tello.rotate_cw(90)
+        basic.showLeds(`
+            # # # # .
+            . . . # .
+            . . . # .
+            . . # # #
+            . . . # .
+            `)
+        basic.pause(500)
     }
     if (dronecontroller.getright_X() < 0) {
         Tello.rotate_ccw(90)
+        basic.showLeds(`
+            . # # # #
+            . # . . .
+            . # . . .
+            # # # . .
+            . # . . .
+            `)
+        basic.pause(500)
     }
     if (0 < dronecontroller.getleft_Y()) {
         Tello.up(20)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            . . # . .
+            `)
+        basic.pause(500)
     }
     if (dronecontroller.getleft_Y() < 0) {
         Tello.down(20)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            # # # # #
+            . # # # .
+            . . # . .
+            `)
+        basic.pause(500)
     }
 })
