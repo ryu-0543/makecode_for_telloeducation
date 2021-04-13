@@ -33,7 +33,7 @@ namespace Tello {
     //% group="初心者向け"
     export function up(value : number): void {
         if (flying == 1) {
-            radio.sendString("up" + value)
+            radio.sendString("up " + value)
             flying = 1
         }
     }
@@ -47,7 +47,7 @@ namespace Tello {
     //% group="初心者向け"
     export function down(value : number): void {
         if (flying == 1) {
-            radio.sendString("down" + value)
+            radio.sendString("down " + value)
             flying = 1
         }
     }
@@ -89,7 +89,7 @@ namespace Tello {
     //% group="初心者向け"
     export function left(value : number): void {
         if (flying == 1) {
-            radio.sendString("left" + value)
+            radio.sendString("left " + value)
             flying = 1
         }
     }
@@ -196,7 +196,8 @@ namespace Tello {
     //% group="上級者向け"
     export function RCmode(a:number,b:number,c:number,d:number): void {
         if (flying == 1) {
-            radio.sendString("rc "+a+b+c+d)
+            let sendstring = "rc "+ a + " " + b + " " + c + " " + d
+            radio.sendString(sendstring)
         }
     }
 
