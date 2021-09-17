@@ -1,5 +1,4 @@
 input.onGesture(Gesture.TiltRight, function () {
-    Tello.right(distanse)
     basic.showLeds(`
         . . # . .
         . . . # .
@@ -14,7 +13,6 @@ input.onButtonPressed(Button.A, function () {
     basic.showString("" + (distanse))
 })
 input.onGesture(Gesture.TiltLeft, function () {
-    Tello.left(distanse)
     basic.showLeds(`
         . . # . .
         . # . . .
@@ -25,7 +23,6 @@ input.onGesture(Gesture.TiltLeft, function () {
     basic.pause(100)
 })
 input.onGesture(Gesture.LogoUp, function () {
-    Tello.back(distanse)
     basic.showLeds(`
         . . # . .
         . . # . .
@@ -36,7 +33,6 @@ input.onGesture(Gesture.LogoUp, function () {
     basic.pause(100)
 })
 input.onGesture(Gesture.LogoDown, function () {
-    Tello.forward(distanse)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -67,22 +63,11 @@ input.onButtonPressed(Button.AB, function () {
             `)
     }
 })
-radio.onReceivedString(function (receivedString) {
-    basic.showLeds(`
-        # # # # #
-        # . . . #
-        # . . . #
-        # . . . #
-        # # # # #
-        `)
-    basic.pause(100)
-})
 input.onButtonPressed(Button.B, function () {
     distanse += 10
     basic.showString("" + (distanse))
 })
 let distanse = 0
-Tello.radiosetgroup(0)
 distanse = 30
 basic.forever(function () {
     if (30 < dronecontroller.getright_X()) {
