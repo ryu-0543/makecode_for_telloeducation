@@ -1,5 +1,5 @@
 
-> Open this page at [https://naikasann.github.io/makecode_for_telloeducation/](https://kawalab.github.io/makecode_for_telloeducation/)
+> Open this page at [https://kawalab.github.io/makecode_for_telloeducation/](https://kawalab.github.io/makecode_for_telloeducation/)
 
 ## Use as Extension
 
@@ -8,7 +8,7 @@ This repository can be added as an **extension** in MakeCode.
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **New Project**
 * click on **Extensions** under the gearwheel menu
-* search for **https://github.com/naikasann/makecode_for_telloeducation** and import
+* search for **https://github.com/kawalab/makecode_for_telloeducation** and import
 
 ## Edit this project ![Build status badge](https://github.com/kawalab/makecode_for_telloeducation/workflows/MakeCode/badge.svg)
 
