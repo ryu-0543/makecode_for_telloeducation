@@ -6,7 +6,7 @@
 namespace Tello {
     /**
      * 通信グループの設定を行う．受信機と送信機のグループ設定は合わせてね
-     * @param 通信グループの番号 value 1-100, eg: 1
+     * @param value 通信グループの番号 value 1-100, eg: 1
      */
     //% block="無線グループの設定を行う %value"
     //% group="設定"
@@ -16,7 +16,7 @@ namespace Tello {
 
     /**
      * 通信グループの設定を行う．受信機と送信機のグループ設定は合わせてね！
-     * @param スピードの設定を行う value 10-100, eg: 10
+     * @param value スピードの設定を行う value 10-100, eg: 10
      */
     //% block="スピードを設定する %value"
     //% group="設定"
